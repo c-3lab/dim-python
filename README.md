@@ -1,6 +1,6 @@
 # dim-python
 
-`dim-python` is a Python implementation of dim (Data Installation Manager): Manage open data in your projects, like a package manager.
+`dim-python` is a Python implementation of [dim (Data Installation Manager): Manage open data in your projects, like a package manager](https://github.com/c-3lab/dim).
 
 ## Join community
 
