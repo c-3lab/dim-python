@@ -20,7 +20,7 @@ git clone https://github.com/c-3lab/dim-python.git
 
 Install Python 3.8+.
 
-Then, install `poetry` 1.2.0+ as follows/
+Then, install `poetry` 1.2.0+ as follows.
 
 Windows:
 
