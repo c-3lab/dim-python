@@ -1,7 +1,7 @@
 name: "Feature request"
 description: "Reports regarding bug, slow performance, memory issues, installation issues"
 
-title: ""
+title: "[New] "
 labels: ["enhancement", "documentation"]
 
 body:

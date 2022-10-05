@@ -1,7 +1,7 @@
 name: "Update tests"
 description: "This may update files in ./tests directory for pytest"
 
-title: ""
+title: "[Dev] "
 labels: ["development"]
 
 body:
