@@ -1,7 +1,7 @@
 name: "Revise development workflow"
 description: "This may update ./.github directory, ./pyproject.toml etc."
 
-title: ""
+title: "[Dev] "
 labels: ["development"]
 
 body:
