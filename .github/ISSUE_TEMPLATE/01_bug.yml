@@ -1,0 +1,85 @@
+name: "Bug report"
+description: "Reports regarding bug, slow performance, memory issues, installation issues"
+
+title: ""
+labels: ["bug"]
+
+body:
+  - type: markdown
+    attributes:
+      value: Always welcome, this is developed by a community of volunteers :)
+
+  - type: textarea
+    id: summary
+    attributes:
+      label: Summary
+      placeholder: Please provide the summary.
+    validations:
+      required: true
+
+  - type: textarea
+    id: tried
+    attributes:
+      label: Reproducible example script
+      description:  Please provide the script your tried.
+      value: |
+        import dim
+        print(dim.__version__)
+      render: python
+    validations:
+      required: true
+
+  - type: textarea
+    id: output
+    attributes:
+      label: The current outputs
+      description: Errors and un-expected outputs of the script, running time etc.
+      render: python
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected outputs
+      description: Expected outputs of the script.
+      placeholder: "'No errors', or expected outputs"
+      render: python
+
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment
+      description: Please replace 'x' with the correct value.
+      value: |
+          - dim-python version: 0.x.x
+          - Python version: 3.x.x
+      render: markdown
+    validations:
+      required: true
+
+  - type: dropdown
+    id: package-manager
+    attributes:
+      label: Package manager (required if installation issue)
+      multiple: true
+      options:
+        - poetry
+        - pip
+        - conda
+        - Others (commented)
+
+  - type: dropdown
+    id: os
+    attributes:
+      label: Platform (required if installation issue)
+      multiple: true
+      options:
+        - Windows
+        - Ubuntu
+        - MacOS
+        - Others (commented)
+
+  - type: textarea
+    id: comment
+    attributes:
+      label: Additional Context
+      placeholder: Additional Context to fix the bug, including useful references.
