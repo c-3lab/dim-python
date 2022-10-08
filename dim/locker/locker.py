@@ -14,17 +14,17 @@ class Locker(object):
 
     Args:
         directory: directory which has dim.json to parse
-        errors (optional): "coerce" (create {directory}/dim.json if not exist) or "raise"
+        create_if_missing (optional): True (create {directory}/dim.json if not exist) or False (default)
 
     Raises:
         FileNotFoundError: {errors} is not "raise" and {directory}/dim.json does not exist
     """
 
-    def __init__(self, directory: str, errors: str = "coerce") -> None:
+    def __init__(self, directory: str, create_if_missing: bool = False) -> None:
         self._dim_json_path = Path(directory) / "dim.json"
         if self._dim_json_path.exists():
             self._read_dim_json()
-        elif errors == "coerce":
+        elif create_if_missing:
             self._write_empty_dim_json()
         else:
             raise FileNotFoundError(f"dim.json not found in {directory=}")
