@@ -21,6 +21,7 @@ class _DimJsonContent(DataClassJsonMixin):
     Note:
         URL of CKAN is https://www.geospatial.jp/ckan/
     """
+    __dataclass_fields__: dict
     name: str
     url: Optional[str] = field(default=None)
     catalogUrl: Optional[str] = field(default=None)
