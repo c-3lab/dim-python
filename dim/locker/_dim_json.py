@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-from typing import Optional
+from typing import Dict, List, Optional
 from dataclasses import dataclass, field
 from dataclasses_json import DataClassJsonMixin
 
@@ -24,8 +24,8 @@ class _DimJsonContent(DataClassJsonMixin):
     url: Optional[str] = field(default=None)
     catalogUrl: Optional[str] = field(default=None)
     catalogResourceId: Optional[str] = field(default=None)
-    postProcesses: list[str] = field(default_factory=list)
-    headers: dict[str, str] = field(default_factory=dict)
+    postProcesses: List[str] = field(default_factory=list)
+    headers: Dict[str, str] = field(default_factory=dict)
 
 
 @dataclass
@@ -37,7 +37,7 @@ class _DimJson(DataClassJsonMixin):
         contents: list of database definitions
     """
     fileVersion: str = field(init=False)
-    contents: list[_DimJsonContent] = field(default_factory=list)
+    contents: List[_DimJsonContent] = field(default_factory=list)
 
     def __post_init__(self):
         self.fileVersion = "1.1"
