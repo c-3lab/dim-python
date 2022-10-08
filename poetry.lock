@@ -128,14 +128,6 @@ optional = false
 python-versions = "*"
 
 [[package]]
-name = "nested-dataclasses"
-version = "0.2"
-description = "Implements decorator `nested` that adds a parent and children to a dataclass."
-category = "main"
-optional = false
-python-versions = "*"
-
-[[package]]
 name = "nodeenv"
 version = "1.7.0"
 description = "Node.js virtual environment builder"
@@ -318,7 +310,7 @@ typing-extensions = ">=3.7.4"
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.8"
-content-hash = "6076f20c2a3f6a4c1ebf1a471488659e8045e804b31bc4d66ddc35a34e0f4cfa"
+content-hash = "aacad423dc56563556f11e8e58bbf165527eafaaf2b2be2a9732cd9d5a02019c"
 
 [metadata.files]
 attrs = [
@@ -412,10 +404,6 @@ mccabe = [
 mypy-extensions = [
     {file = "mypy_extensions-0.4.3-py2.py3-none-any.whl", hash = "sha256:090fedd75945a69ae91ce1303b5824f428daf5a028d2f6ab8a299250a846f15d"},
     {file = "mypy_extensions-0.4.3.tar.gz", hash = "sha256:2d82818f5bb3e369420cb3c4060a7970edba416647068eb4c5343488a6c604a8"},
-]
-nested-dataclasses = [
-    {file = "nested-dataclasses-0.2.tar.gz", hash = "sha256:f7fd5fca422f6f02477ca606c51032a2e73709559ed0b7cb1c8ece7baff8c827"},
-    {file = "nested_dataclasses-0.2-py3-none-any.whl", hash = "sha256:3322a7631c68b43509d2e77f53095f891483b415e7b7d98637389a0506652102"},
 ]
 nodeenv = [
     {file = "nodeenv-1.7.0-py2.py3-none-any.whl", hash = "sha256:27083a7b96a25f2f5e1d8cb4b6317ee8aeda3bdd121394e5ac54e498028a042e"},

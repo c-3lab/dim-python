@@ -22,7 +22,6 @@ classifiers = [
 python = "^3.8"
 dataclasses-json = "^0.5.7"
 typing-extensions = "^4.4.0"
-nested-dataclasses = "^0.2"
 
 [tool.poetry.group.test.dependencies]
 pytest = "^7.1.3"

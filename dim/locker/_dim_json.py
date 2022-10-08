@@ -5,10 +5,8 @@ from __future__ import annotations
 from typing import Optional
 from dataclasses import dataclass, field
 from dataclasses_json import DataClassJsonMixin
-from nested_dataclasses import nested
 
 
-@nested
 @dataclass
 class _DimJsonContent(DataClassJsonMixin):
     """Dataclass to parse the contents of dim.json file.
@@ -31,7 +29,6 @@ class _DimJsonContent(DataClassJsonMixin):
     headers: dict[str, str] = field(default_factory=dict)
 
 
-@nested
 @dataclass
 class _DimJson(DataClassJsonMixin):
     """Dataclass to parse dim.json file.
