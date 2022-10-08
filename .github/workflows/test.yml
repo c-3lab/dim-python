@@ -56,7 +56,7 @@ jobs:
 
       - name: Linting Python codes
         run: |
-          poetry run flake8 dim
+          poetry run pflake8 dim
           poetry run pyright --warnings
 
       - name: run quality check tests
