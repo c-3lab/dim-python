@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 
 from __future__ import annotations
-from typing import Dict, Optional
+from typing import Optional
 from dataclasses import dataclass, field
 from dataclasses_json import DataClassJsonMixin
 
@@ -26,7 +26,7 @@ class _DimJsonContent(DataClassJsonMixin):
     catalogUrl: Optional[str] = field(default=None)
     catalogResourceId: Optional[str] = field(default=None)
     postProcesses: list[str] = field(default_factory=list)
-    headers: Dict[str, str] = field(default_factory=dict)
+    headers: dict[str, str] = field(default_factory=dict)
 
 
 @dataclass
