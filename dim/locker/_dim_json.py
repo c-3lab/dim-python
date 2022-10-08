@@ -1,7 +1,6 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-from __future__ import annotations
 from typing import Optional
 from dataclasses import dataclass, field
 from dataclasses_json import DataClassJsonMixin
