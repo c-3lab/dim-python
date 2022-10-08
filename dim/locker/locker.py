@@ -4,6 +4,7 @@
 from __future__ import annotations
 import json
 from pathlib import Path
+from typing import Any
 from typing_extensions import Self
 from dim.locker._dim_json import _DimJson
 
@@ -32,7 +33,7 @@ class Locker(object):
         return self.defined == other.defined
 
     @property
-    def defined(self) -> dict[str, str | list | dict]:
+    def defined(self) -> dict[str, Any]:
         """Parameter values defined by dim.json file.
         """
         return self._dim_json.to_dict()

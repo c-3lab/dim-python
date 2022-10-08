@@ -1,6 +1,8 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
+from __future__ import annotations
+from typing import Optional
 from dataclasses import dataclass, field
 from dataclasses_json import DataClassJsonMixin
 
@@ -20,11 +22,11 @@ class _DimJsonContent(DataClassJsonMixin):
         URL of CKAN is https://www.geospatial.jp/ckan/
     """
     name: str
-    url: str = field(default=None)
-    catalogUrl: str = field(default=None)
-    catalogResourceId: str = field(default=None)
+    url: Optional[str] = field(default=None)
+    catalogUrl: Optional[str] = field(default=None)
+    catalogResourceId: Optional[str] = field(default=None)
     postProcesses: list[str] = field(default_factory=list)
-    headers: dict[str] = field(default_factory=dict)
+    headers: dict[str, str] = field(default_factory=dict)
 
 
 @dataclass
@@ -32,10 +34,8 @@ class _DimJson(DataClassJsonMixin):
     """Dataclass to parse dim.json file.
 
     Args:
+        fileVersion: version number of dim.json file structure, fixed to '1.1' at this time.
         contents: list of database definitions
-
-    Note:
-        fileVersion = 1.1: version number of dim.json file structure.
     """
     fileVersion: str = field(init=False)
     contents: list[_DimJsonContent] = field(default_factory=list)
