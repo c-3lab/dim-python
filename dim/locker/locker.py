@@ -53,10 +53,10 @@ class Locker(object):
         with self._dim_json_path.open("w") as fh:
             json.dump(self._dim_json.to_dict(), fh, indent=4)
 
-    def lock(self) -> Self:
-        """Lock and write dim-lock.json.
+    def run(self) -> Self:
+        """Run locking and write dim-lock.json.
 
         Raises:
-            NotImplementedError
+            NotImplementedError: implemented later
         """
         raise NotImplementedError
