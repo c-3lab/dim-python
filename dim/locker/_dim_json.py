@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 
 from __future__ import annotations
-from typing import Optional
+from typing import Any, Optional
 from dataclasses import dataclass, field
 from dataclasses_json import DataClassJsonMixin
 
@@ -38,7 +38,10 @@ class _DimJson(DataClassJsonMixin):
         contents: list of database definitions
     """
     fileVersion: str = field(init=False)
-    contents: list[_DimJsonContent] = field(default_factory=list)
+    contents: list[Any] = field(default_factory=list)
 
     def __post_init__(self):
         self.fileVersion = "1.1"
+        for content in self.contents:
+            if not isinstance(self.contents, _DimJsonContent):
+                raise TypeError("Unexpected content was added")
