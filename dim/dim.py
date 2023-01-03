@@ -3,6 +3,7 @@ import subprocess
 import re
 import json
 import csv
+import requests
 
 
 DIM_FILE_PATH = os.environ.get('DIM_FILE_PATH', './')
@@ -23,6 +24,14 @@ def load_data(name, file_type='text', dim_file_path=DIM_FILE_PATH, encoding='utf
                     return csv.DictReader(f)
                 else:
                     return f.read()
+
+
+def fetch_data(name, dim_file_path=DIM_FILE_PATH):
+    base_path = dim_file_path.rstrip('/')
+    dim_json = load_dim_json(base_path)
+    for content in dim_json['contents']:
+        if content['name'] == name:
+            return requests.get(content['url'])
 
 
 def load_dim_json(dim_file_path=DIM_FILE_PATH, encoding='utf-8'):
