@@ -37,6 +37,8 @@ dim.install('https://example.com/xxx.json', 'example_name', ['encode utf-8'])
 
 print(dim.list())
 
+print(dim.load_data('example_name', 'json'))
+
 ```
 
 
