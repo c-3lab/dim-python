@@ -37,6 +37,12 @@ def load_dim_lock_json(dim_file_path=DIM_FILE_PATH, encoding='utf-8'):
         return json.load(f)
 
 
+def init():
+    cmd = ['dim', 'init']
+    completed_process = subprocess.run(cmd)
+    return completed_process.returncode == 0
+
+
 def install(source, name, postprocesses=[], force=False, async_install=False):
     cmd = ['dim', 'install']
     if re.match(r'^https?:\/\/', source):
