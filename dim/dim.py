@@ -8,7 +8,7 @@ import csv
 DIM_FILE_PATH = os.environ.get('DIM_FILE_PATH', './')
 
 
-def load(name, file_type='text', dim_file_path=DIM_FILE_PATH, encoding='utf-8'):
+def load_data(name, file_type='text', dim_file_path=DIM_FILE_PATH, encoding='utf-8'):
     base_path = dim_file_path.rstrip('/')
     dim_lock_json = load_dim_lock_json(base_path, encoding)
     if 'contents' not in dim_lock_json:
