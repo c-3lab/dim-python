@@ -10,13 +10,37 @@ We are looking for members to develop together as an open source community.
 
 ## Quick Start
 
-### Install the dim
+1. Install the dim
 
-Clone this repository with `git clone` command.
+https://github.com/c-3lab/dim#install-the-dim
 
-```Bash
-git clone https://github.com/c-3lab/dim-python.git
+2. Install the python-dim
+
 ```
+$ pip install python-dim
+```
+
+3. Initialize the project for dim
+
+```
+$ dim init
+```
+
+Can initialize the project using dim-python
+
+4. Use the python-dim
+
+```python
+import dim
+
+dim.install('https://example.com/xxx.json', 'example_name', ['encode utf-8'])
+
+print(dim.list())
+
+```
+
+
+## Build
 
 Install Python 3.8+.
 
