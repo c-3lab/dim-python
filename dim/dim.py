@@ -1,6 +1,5 @@
 import os
 import subprocess
-import re
 import json
 import csv
 import requests
@@ -52,9 +51,9 @@ def init():
     return completed_process.returncode == 0
 
 
-def install(source, name, postprocesses=[], force=False, async_install=False):
+def install(source, name, postprocesses=[], from_file=False, force=False, async_install=False):
     cmd = ['dim', 'install']
-    if re.match(r'^https?:\/\/', source):
+    if not from_file:
         cmd.append(source)
     else:
         cmd.extend(['-f', source])
