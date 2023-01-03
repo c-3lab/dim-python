@@ -8,7 +8,7 @@ readme = "README.md"
 packages = [{include = "dim"}]
 repository = "https://github.com/c-3lab/dim-python/"
 documentation = "https://github.com/c-3lab/dim-python/README.md"
-keywords = ["open-data", "dataops", "data science"]
+keywords = ["open-data", "dataops", "data science", "datasets"]
 classifiers = [
     "Development Status :: 2 - Pre-Alpha",
     "License :: OSI Approved :: MIT License",
@@ -34,6 +34,7 @@ build-backend = "poetry.core.masonry.api"
 
 [tool.flake8]
 extend-ignore = ["E501"]
+max-line-length = 120
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
