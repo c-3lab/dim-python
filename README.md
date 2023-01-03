@@ -26,7 +26,7 @@ $ pip install python-dim
 $ dim init
 ```
 
-Can initialize the project using dim-python
+Also can initialize the project using dim-python.
 
 4. Use the python-dim
 
