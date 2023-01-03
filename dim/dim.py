@@ -47,7 +47,7 @@ def load_dim_lock_json(dim_file_path=DIM_FILE_PATH, encoding='utf-8'):
 
 def init():
     cmd = ['dim', 'init']
-    completed_process = subprocess.run(cmd)
+    completed_process = subprocess.run(cmd, encoding='utf-8', stdout=subprocess.PIPE)
     return completed_process.returncode == 0
 
 
@@ -65,13 +65,13 @@ def install(source, name, postprocesses=[], from_file=False, force=False, async_
     if async_install:
         cmd.append('-A')
 
-    completed_process = subprocess.run(cmd)
+    completed_process = subprocess.run(cmd, encoding='utf-8', stdout=subprocess.PIPE)
     return completed_process.returncode == 0
 
 
 def uninstall(name):
     cmd = ['dim', 'uninstall', name]
-    completed_process = subprocess.run(cmd)
+    completed_process = subprocess.run(cmd, encoding='utf-8', stdout=subprocess.PIPE)
     return completed_process.returncode == 0
 
 
@@ -81,7 +81,7 @@ def update(name=None, async_insatll=False):
         cmd.append(name)
     if async_insatll:
         cmd.append('-A')
-    completed_process = subprocess.run(cmd)
+    completed_process = subprocess.run(cmd, encoding='utf-8', stdout=subprocess.PIPE)
     return completed_process.returncode == 0
 
 
@@ -89,9 +89,11 @@ def list(simple=False):
     cmd = ['dim', 'list']
     if simple:
         cmd.append('-s')
-    completed_process = subprocess.run(cmd)
+    completed_process = subprocess.run(cmd, encoding='utf-8', stdout=subprocess.PIPE)
     return completed_process.stdout
 
 
 def search(keyword, number=10):
-    pass
+    cmd = ['dim', 'search', keyword, '-n', str(number)]
+    completed_process = subprocess.run(cmd, encoding='utf-8', stdout=subprocess.PIPE)
+    return completed_process.stdout
