@@ -55,7 +55,7 @@ jobs:
         run: poetry install --no-interaction --no-root --with test
 
       - name: Linting Python codes
-        run: poetry run flake8 dim
+        run: poetry run pflake8 dim
 
       - name: run quality check tests
         run: poetry run pytest
