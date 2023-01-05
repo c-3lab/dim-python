@@ -68,7 +68,7 @@ dim.load_data('name', 'csv')
 #### Parameters
 
 * name(requrire)
-  * Specify data name
+  * Specify the data name
 * file_type(option)
   * Specify 'text' or 'json' or 'csv'
   * default: 'text'
@@ -82,9 +82,9 @@ dim.load_data('name', 'csv')
 #### Return
 
 Return type each file_type
-text: str
-csv:  csv.DictReader object
-json: dict
+* text: str
+* csv : csv.DictReader object
+* json: dict
 
 ---
 
@@ -97,7 +97,7 @@ dim.fetch_data('name')
 #### Parameters
 
 * name(requrire)
-  * Specify data name
+  * Specify the data name
 * dim_file_path(option)
   * Specify a file path existing dim.json and dim-lock.json, data_files 
   * default: './'
