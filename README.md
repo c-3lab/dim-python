@@ -41,6 +41,217 @@ print(dim.load_data('example_name', 'json'))
 
 ```
 
+## Method
+
+* [load_data](#load_data)
+* [fetch_data](#fetch_data)
+* [load_dim_json](#load_dim_json)
+* [load_dim_lock_json](#load_dim_lock_json)
+* [init](#init)
+* [install](#install)
+* [uninstall](#uninstall)
+* [update](#update)
+* [list](#list)
+* [search](#search)
+
+### load_data
+
+```python
+dim.load_data('name', 'csv')
+```
+
+#### Parameters
+
+* name(requrire)
+  * Specify data name
+* file_type(option)
+  * Specify 'text' or 'json' or 'csv'
+  * default: 'text'
+* dim_file_path(option)
+  * Specify a file path existing dim.json and dim-lock.json, data_files 
+  * default: './'
+* encoding(option)
+  * Specify encoding of data
+  * default: 'utf-8'
+
+#### Return
+
+Return type each file_type
+text: str
+csv:  csv.DictReader object
+json: dict
+
+---
+
+### fetch_data
+
+```python
+dim.fetch_data('name')
+```
+
+#### Parameters
+
+* name(requrire)
+  * Specify data name
+* dim_file_path(option)
+  * Specify a file path existing dim.json and dim-lock.json, data_files 
+  * default: './'
+
+#### Return
+
+requests.Response object
+
+---
+
+### load_dim_json
+
+```python
+dim.load_dim_json()
+```
+
+
+#### Parameters
+
+* dim_file_path(option)
+  * Specify a file path existing dim.json and dim-lock.json, data_files 
+  * default: './'
+* encoding(option)
+  * Specify encoding of data
+  * default: 'utf-8'
+
+#### Return
+
+dict
+
+---
+
+### load_dim_lock_json
+
+```python
+dim.load_dim_lock_json()
+```
+
+#### Parameters
+
+* dim_file_path(option)
+  * Specify a file path existing dim.json and dim-lock.json, data_files 
+  * default: './'
+* encoding(option)
+  * Specify encoding of data
+  * default: 'utf-8'
+
+#### Return
+
+dict
+
+---
+
+### init
+
+```python
+dim.init()
+```
+
+#### Parameters
+
+#### Return
+
+boolean
+
+---
+
+### install
+
+```python
+dim.install()
+```
+
+#### Parameters
+
+* source(require)
+* name(require)
+* postprocesses(option)
+  * default: []
+* from_file(option)
+  * default: False
+* force(option)
+  * default: False
+* async_install(option)
+  * default: False
+
+#### Return
+
+boolean
+
+---
+
+### uninstall
+
+```python
+dim.uninstall()
+```
+
+#### Parameters
+* name(require)
+
+#### Return
+
+boolean
+
+---
+
+### update
+
+```python
+dim.update()
+```
+
+#### Parameters
+
+* name(require)
+* async_install(option)
+  * default: False
+
+#### Return
+
+boolean
+
+---
+
+### list
+
+```python
+dim.list()
+```
+
+#### Parameters
+
+* simple(option)
+  * default: False
+  
+#### Return
+
+str
+
+---
+
+### search
+
+```python
+dim.search()
+```
+
+#### Parameters
+
+* keyword(require)
+* number(option)
+  * default: 10
+  
+#### Return
+
+str
+
+---
 
 ## Build
 
