@@ -193,7 +193,7 @@ boolean
 ### uninstall
 
 ```python
-dim.uninstall()
+dim.uninstall('name')
 ```
 
 #### Parameters
@@ -208,7 +208,7 @@ boolean
 ### update
 
 ```python
-dim.update()
+dim.update('name')
 ```
 
 #### Parameters
