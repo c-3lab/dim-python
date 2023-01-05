@@ -1,5 +1,10 @@
 # dim-python
 
+[![PyPI version](https://badge.fury.io/py/dim-python.svg)](https://badge.fury.io/py/dim-python)
+[![Downloads](https://static.pepy.tech/badge/dim-python)](https://pepy.tech/project/dim-python)
+
+
+
 `dim-python` is a Python implementation of [dim (Data Installation Manager): Manage open data in your projects, like a package manager](https://github.com/c-3lab/dim).
 
 ## Join community
