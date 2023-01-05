@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "dim-python"
-version = "0.1.0"
+version = "0.1.1"
 description = "Python implementation of dim (Data Installation Manager): Manage open data in your projects, like a package manager."
 authors = ["C3Lab <info.c3lab@gmail.com>"]
 license = "MIT license"
