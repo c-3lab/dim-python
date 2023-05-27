@@ -33,7 +33,7 @@ $ dim init
 
 Also can initialize the project using dim-python.
 
-4. Use the python-dim
+4. Use the dim-python
 
 ```python
 import dim
