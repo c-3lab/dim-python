@@ -19,10 +19,10 @@ We are looking for members to develop together as an open source community.
 
 https://github.com/c-3lab/dim#install-the-dim
 
-2. Install the python-dim
+2. Install the dim-python
 
 ```
-$ pip install python-dim
+$ pip install dim-python
 ```
 
 3. Initialize the project for dim
